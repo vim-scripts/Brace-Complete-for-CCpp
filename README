@@ -1,0 +1,17 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=230
+
+This is for use with the style of C/C++ coding that says ALWAYS have braces after an if, and always start braces on a new line: 
+
+if(a ==1 )
+{
+}
+else
+{
+}
+it also changes
+else{
+to 
+else
+{
+
+For those whoe get lazy :) 
