@@ -1,6 +1,6 @@
 " Auto-braces for c/c++
 " Author: Michael Geddes <michaelrgeddes@optushome.com.au>
-" Version: 0.1
+" Version: 0.2
 
 " Adds braces after if, while 
 " Makes sure { doesn't follow 'else' 
@@ -18,10 +18,10 @@ endif
 " This version relies on cindent being set.
 
 " FileTypes: c,cpp
-imap <cr> <cr><c-r>=<SID>AutoBrace()<cr>
-imap <m-]> <c-o>]}<c-o>:s/\s\+$//e<cr><c-o>:startinsert<cr><right>
+imap <buffer> <cr> <cr><c-r>=<SID>AutoBrace()<cr>
+imap <buffer> <m-]> <c-o>]}<c-o>:s/\s\+$//e<cr><c-o>:startinsert<cr><right>
 
-abbrev else <c-r>=<SID>FixElse()<cr>
+iabbrev <buffer> else <c-r>=<SID>FixElse()<cr>
 
 fun! s:FixElse()
   if &filetype=="cpp" || &filetype=="c"
